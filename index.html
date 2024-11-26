@@ -9,7 +9,10 @@
 </head>
 <body>
     <a-scene>
-        
+       <a-assets>
+        <a-asset-item id="cama" src="assets/assets-blender/cama.gltf" ></a-asset-item>
+       </a-assets>
+       <a-entity gltf-model="#cama" scale="0.5 0.5 0.5"></a-entity>
       <!-- Paredes de las habitaciones -->
       <!-- pared frontal -->
       <a-box 
