@@ -9,10 +9,10 @@
 </head>
 <body>
     <a-scene>
-       <a-assets>
+       <!--<a-assets>
         <a-asset-item id="cama" src="assets/assets-blender/cama.gltf" ></a-asset-item>
        </a-assets>
-       <a-entity gltf-model="#cama" scale="0.5 0.5 0.5"></a-entity>
+       <a-entity gltf-model="#cama" scale="0.5 0.5 0.5"></a-entity> -->
       <!-- Paredes de las habitaciones -->
       <!-- pared frontal -->
       <a-box 
@@ -51,6 +51,14 @@
         width="20" 
         color="#D2B48C">
       </a-box>
+
+      <a-box position="0 1.5 -9.5" depth="1" height="3" width="3" color="#8B4513"></a-box>
+
+      <!-- Habitación 2 -->
+      <a-box position="0 2 -20.5" depth="1" height="8" width="20" color="#D2B48C"></a-box> <!-- pared frontal -->
+      <a-box position="0 2 -10.5" depth="1" height="8" width="20" color="#D2B48C"></a-box> <!-- pared trasera -->
+      <a-box position="-9.5 2 -15.5" rotation="0 90 0" depth="1" height="8" width="10" color="#D2B48C"></a-box> <!-- pared izquierda -->
+      <a-box position="9.5 2 -15.5" rotation="0 90 0" depth="1" height="8" width="10" color="#D2B48C"></a-box> <!-- pared derecha -->
 
      
 
