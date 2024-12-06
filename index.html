@@ -14,36 +14,43 @@
   <a-scene physics>
 
    <!-- Paredes del patio -->
-   <!-- pared frontal -->
-   <a-box position="-7.463 2 -13.229" 
-   scale="1.740 1 1"
-   depth="1" 
-   height="15" 
-   width="7" 
-   color="#F0D7DE" 
-   static-body="sphereRadius: NaN" 
-   velocity="">
-   </a-box>
-  
- 
-   <a-box position="9.57707 2 -16.77884" 
-   depth="1" 
-   height="15" 
-   width="10" color="#E8BEC6" 
-   static-body="sphereRadius: NaN" v
-   elocity="" scale="1.38 1 1">
+    
+   
+   <!-- techos-->
+
+     <!--techo del patio-->
+   <a-box position="0.229 10.173 -14.40594" width="30" height="1" depth="25" color="#875D46" scale="1.07074 0.96 0.2259">
   </a-box>
 
-   <a-assets><!-- arco frontal -->
+  <a-box position="13.60543 10.173 1.07475" width="30" height="1" depth="25" color="#875D46" scale="1.07074 0.96 0.2259" rotation="0 -89.92286115680706 0">
+  </a-box>
+
+  <a-box position="-12.96898 10.173 1.29699" width="30" height="1" depth="25" color="#875D46" scale="1.071 0.96 0.226" rotation="0 -89.92300000000002 0">
+  </a-box>
+
+  <a-box position="0.36292 10.173 14.57907" width="30" height="1" depth="25" color="#875D46" scale="1.071 0.96 0.226">
+  </a-box>
+
+
+
+   <!-- pared frontal -->
+   <a-box position="-9.84102 2 -16.8508" scale="1.83 1.06192 1" depth="1" height="15" width="7" color="#F0D7DE" static-body="sphereRadius: NaN" velocity="">
+  </a-box>
+  
+ 
+  <a-box position="9.57707 2 -16.77884" depth="1" height="15" width="10" color="#E8BEC6" static-body="sphereRadius: NaN" v="" elocity="" scale="1.38 1.08553 1" velocity="">
+  </a-box>
+
+  <!-- arco frontal -->
+   <a-assets>
     <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
    </a-assets>
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" position="3.412 0 -11.216"></a-entity>
 
+   
+
    <!-- pared trasera -->
-   <a-box position="0.10125 2 16.92885" 
-   depth="1" height="15" 
-   width="25" color="#E8BEC6" 
-   static-body="sphereRadius: NaN" velocity="" scale="1.31 1 1">
+   <a-box position="0.10125 2 16.92885" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.31 1.07032 1">
   </a-box>
 
    <a-assets><!-- arco trasero -->
@@ -52,7 +59,7 @@
     <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" position="3.415 0.000 10.799"></a-entity>
 
    <!-- pared izquierda -->
-   <a-box position="-15.68823 2 -0.07118" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.39 1 1">
+   <a-box position="-15.68823 2 -0.07118" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.38 1.06543 1">
   </a-box>
 
    <a-assets><!-- arco izquierdo -->
@@ -61,7 +68,7 @@
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" rotation="0 90 0" position="-10.989 0 -3.840"></a-entity>
 
    <!-- pared derecha -->
-   <a-box position="16.03283 2 0.25393" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.37 1 1">
+   <a-box position="16.03283 2 0.25393" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.37 1.07983 1">
   </a-box>
 
    <a-assets><!-- arco derecho-->
@@ -70,20 +77,27 @@
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" rotation="0 90 0" position="10.976 0 -3.725"></a-entity>
 
   
-   <!-- Habitación 2 -->
-   <a-box position="-12.00697 2 -17.31336" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C">
-   </a-box> <!-- pared frontal -->
+   <!-- cosina -->
+
+     <!-- pared tracera -->
+     <a-box position="-22.66959 2 -29.40512" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C" scale="2.56813 1.05737 1">
+    </a-box>
    
- <a-box position="-12.00697 2 -17.31336" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C">
- </a-box> <!-- pared izquierda -->
+    <!-- pared izquierda -->
+    <a-box position="-19.29267 2 -17.03922" rotation="0 179.1134822514369 0" depth="1" height="15" width="10" color="#D2B48C" scale="0.63954 1.06 1">
+    </a-box>
 
- <a-box position="13.68993 2 -20.11687" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C">
- </a-box> <!-- pared derecha -->
+    <a-box position="4.63286 1.51017 -41.49078" rotation="0 -0.7477099226457243 -1.0353347358013976" depth="1" height="15" width="10" color="#D2B48C" scale="5.55014 1.05849 1">
+    </a-box> <!-- pared derecha -->
 
+    <a-box position="3.30865 2 -36.34469" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C" scale="1 1.018 1">
+    </a-box>
+
+    <a-box position="3.24523 2 -22.11558" rotation="0 90 0" depth="1" height="15" width="10" color="#D2B48C" scale="1 1.0253 1">
+    </a-box>
   
    
 
-     <a-text value="Mexicanxs sin Verguenza" font="assets/Pis-msdf.json" font-image="assets/Pis.png" negate="false" color="black" scale="3 3 2" position="0 15 -1"></a-text>
 
      
      <a-entity environment="preset: forest; dressingAmount: 1; ground: hills; dressing:trees; dressingScale:5"></a-entity>
