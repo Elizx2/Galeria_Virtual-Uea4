@@ -13,7 +13,7 @@
     <a-assets>
       <a-asset-item id="navmesh" src="assets/assets-blender/corte3cuchillo.glb"></a-asset-item>
     </a-assets>
-    <a-entity environment="preset: forest; dressingAmount: 1; ground: hills; dressing:trees; dressingScale:0"></a-entity>
+    <a-entity environment="preset: forest; dressingAmount: 1; ground: plane; dressing:trees; dressingScale:0"></a-entity>
    
     <!--malla de colision-->
     <!-- primer punto de vista. -->
@@ -172,12 +172,64 @@
     </a-assets>
     <a-entity gltf-model="#techo" position="0 0.5 0"></a-entity>
     
-    <!--piso-->
+    <!--piso dentro-->
     <a-assets>
     <a-asset-item id="piso" src="assets/assets-blender/piso.gltf"></a-asset-item>
     </a-assets>
     <a-entity gltf-model="#piso" position="0 0 0"></a-entity>
+
+    <!--pastopues-->
+  
+    <!--Muebles-->
+    <!--Sala-->
+    <a-assets>
+      <a-asset-item id="sala2" src="assets/assets-blender/sala2.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#sala2" position="-9.111 0.2 -30" rotation="0 180 0" scale="0.65 0.65 0.65"></a-entity>
+
+    <!--CUARTO 1-->
+    <a-assets>
+      <a-asset-item id="cama" src="assets/assets-blender/cama.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#cama" position="35.721 0 -5.679" rotation="0 180 0"></a-entity>
     
+    <a-assets>
+      <a-asset-item id="ropero" src="assets/assets-blender/ropero.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#ropero" position="51.933 0 -6.275" rotation="0 -90 0"></a-entity>
+
+    <!--cuarto2-->
+    <a-assets>
+      <a-asset-item id="cama" src="assets/assets-blender/cama.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#cama" position="36.093 0 33.652" rotation="0 0 0"></a-entity>
+
+    <a-assets>
+      <a-asset-item id="ropero" src="assets/assets-blender/ropero.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#ropero" position="51.933 0 33.077" rotation="0 -90 0"></a-entity>
+
+    <!--Comedor-->
+    <a-assets>
+      <a-asset-item id="comedor" src="assets/assets-blender/comedor2.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#comedor" position="18.649 0.559 -28.818" scale="0.45 0.45 0.45"></a-entity>
+
+    <!--cocina-->
+    <a-assets>
+      <a-asset-item id="cocina4" src="assets/assets-blender/cocina4.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#cocina4" position="18.162 0 1.757" rotation="0 90 0" scale="1.5 1 1"></a-entity>
+    <a-assets>
+      <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#cocina5" position="19.220 2.107 -10.820"></a-entity>
+    <a-assets>
+      <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#cocina5" position="19.220 1.227 -13.536" scale="0.683 0.529 0.483"></a-entity>
+    
+
   </a-scene>
     
 
