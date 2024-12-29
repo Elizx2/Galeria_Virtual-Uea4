@@ -10,9 +10,27 @@
 </head>
 <body>
   <a-scene>
+    <!--Sistema de gestion de assets-->
     <a-assets>
       <a-asset-item id="navmesh" src="assets/assets-blender/corte3cuchillo.glb"></a-asset-item>
+      <a-asset-item id="patio" src="assets/assets-blender/patio.gltf" ></a-asset-item>
+      <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
+      <a-asset-item id="techo" src="assets/assets-blender/techo.gltf"></a-asset-item>
+      <a-asset-item id="piso" src="assets/assets-blender/piso.gltf"></a-asset-item>
+      <a-asset-item id="sala2" src="assets/assets-blender/sala2.gltf"></a-asset-item>
+      <a-asset-item id="cama" src="assets/assets-blender/cama.gltf"></a-asset-item>
+      <a-asset-item id="ropero" src="assets/assets-blender/ropero.gltf"></a-asset-item>
+      <a-asset-item id="comedor" src="assets/assets-blender/comedor2.gltf"></a-asset-item>
+      <a-asset-item id="cazuela" src="assets/assets-blender/cazuela.gltf"></a-asset-item>
+      <a-asset-item id="cocina4" src="assets/assets-blender/cocina4.gltf"></a-asset-item>
+      <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
+
+      <!--Objetos descargados
+      <a-asset-item id="planta1" src="assets/assets-blender/tropical_plant/scene.gltf"></a-asset-item>-->
+
+
     </a-assets>
+
     <a-entity environment="preset: forest; dressingAmount: 1; ground: plane; dressing:trees; dressingScale:0"></a-entity>
    
     <!--malla de colision-->
@@ -36,10 +54,10 @@
 
    <!-- Titulo -->
     
-   <a-text value="Mexicanxs sin Vergüenza" font="assets/Eastwood-msdf.json" font-image="assets/Eastwood.png" negate="false" color="black" scale="2.5 2.5 1" position="-3.34422 9.57354 -9.49506"></a-text>
+   <a-text value="Mexicanxs sin Vergüenza" font="assets/Eastwood-msdf.json" font-image="assets/Eastwood.png" negate="false" color="black" scale="2.62393 2.96753 1.94934" position="-3.87006 9.67535 -9.73461"></a-text>
 
-   <a-text value="Florecer y Resistir" font="assets/Eastwood-msdf.json" font-image="assets/Eastwood.png" negate="false" color="black" scale="2 2 1" position="-1.91528 8.91998 -9.495"></a-text>
-   
+   <a-text value="Florecer y Resistir" font="assets/Eastwood-msdf.json" font-image="assets/Eastwood.png" negate="false" color="black" scale="2.08291 2.07119 1" position="-2.29832 8.92 -9.74865"></a-text>
+
    <!-- techos-->
 
      <!--techo del patio-->
@@ -65,42 +83,30 @@
   </a-box>
   
  <!--pastopues-->
-  <a-assets>
-    <a-asset-item id="patio" src="assets/assets-blender/patio.gltf" ></a-asset-item>
-   </a-assets>
-   <a-entity gltf-model="#patio" position="0 0 -0.333"></a-entity>
+  <a-entity gltf-model="#patio" position="0 0 -0.333"></a-entity>
 
   <!-- arco frontal -->
-   <a-assets>
-    <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
-   </a-assets>
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" position="3.412 0 -11.216"></a-entity>
 
    <!-- pared trasera -->
    <a-box position="20.684 2 16.92885" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="0.880 1.07032 1">
   </a-box>
 
-   <a-assets><!-- arco trasero -->
-     <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
-    </a-assets>
-    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" position="3.415 0.000 10.799"></a-entity>
+  <!-- arco trasero -->
+  <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" position="3.415 0.000 10.799"></a-entity>
 
    <!-- pared izquierda -->
    <a-box position="-15.68823 2 -0.07118" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.38 1.06543 1">
   </a-box>
 
-   <a-assets><!-- arco izquierdo -->
-    <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
-   </a-assets>
+  <!-- arco izquierdo -->
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" rotation="0 90 0" position="-10.989 0 -3.840"></a-entity>
 
    <!-- pared derecha -->
    <a-box position="16.03283 2 -3.419" rotation="0 90 0" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="1.130 1.07983 1">
   </a-box>
 
-   <a-assets><!-- arco derecho-->
-    <a-asset-item id="arcos" src="assets/assets-blender/arcos.gltf" ></a-asset-item>
-   </a-assets>
+  <!-- arco derecho-->
    <a-entity gltf-model="#arcos" scale="0.790 0.560 1.480" rotation="0 90 0" position="10.976 0 -3.725"></a-entity>
 
   
@@ -174,88 +180,53 @@
     <!--pared chiquita derecha1-->
     <a-box position="-12.94172 2 16.92885" depth="1" height="15" width="25" color="#E8BEC6" static-body="sphereRadius: NaN" velocity="" scale="0.26 1.07032 1">
     </a-box>
+
     <!--techo-->
-    <a-assets>
-    <a-asset-item id="techo" src="assets/assets-blender/techo.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#techo" position="0 0.5 0"></a-entity>
     
     <!--piso dentro-->
-    <a-assets>
-    <a-asset-item id="piso" src="assets/assets-blender/piso.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#piso" position="0 0 0"></a-entity>
   
     <!--Muebles-->
     <!--Sala-->
-    <a-assets>
-      <a-asset-item id="sala2" src="assets/assets-blender/sala2.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#sala2" position="-9.111 0.2 -30" rotation="0 180 0" scale="0.65 0.65 0.65"></a-entity>
 
     <!--CUARTO 1-->
-    <a-assets>
-      <a-asset-item id="cama" src="assets/assets-blender/cama.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#cama" position="35.721 0 -5.679" rotation="0 180 0"></a-entity>
-    
-    <a-assets>
-      <a-asset-item id="ropero" src="assets/assets-blender/ropero.gltf"></a-asset-item>
-    </a-assets>
+  
     <a-entity gltf-model="#ropero" position="51.933 0 -6.275" rotation="0 -90 0"></a-entity>
 
     <!--cuarto2-->
-    <a-assets>
-      <a-asset-item id="cama" src="assets/assets-blender/cama.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#cama" position="36.093 0 33.652" rotation="0 0 0"></a-entity>
 
-    <a-assets>
-      <a-asset-item id="ropero" src="assets/assets-blender/ropero.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#ropero" position="51.933 0 33.077" rotation="0 -90 0"></a-entity>
 
     <!--Comedor-->
-    <a-assets>
-      <a-asset-item id="comedor" src="assets/assets-blender/comedor2.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#comedor" position="18.649 1.050 -28.818" scale="0.45 0.45 0.45"></a-entity>
 
     <!--cocina-->
-
-    <a-assets>
-      <a-asset-item id="cazuela" src="assets/assets-blender/cazuela.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#cazuela" position="16.51876 6.97542 5.792" rotation="75 90 0" scale="1.288 1 1.45"></a-entity>
-    <a-assets>
-      <a-asset-item id="cazuela" src="assets/assets-blender/cazuela.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#cazuela" position="16.51876 6.97542 0.79389" rotation="75 90 0" scale="1.288 1 1.45"></a-entity>
-    <a-assets>
-      <a-asset-item id="cazuela" src="assets/assets-blender/cazuela.gltf"></a-asset-item>
-    </a-assets>
     <a-entity gltf-model="#cazuela" position="16.51876 6.97542 -4.54993" rotation="75 90 0" scale="1.288 1 1.45"></a-entity>
-    <a-assets>
-      <a-asset-item id="cocina4" src="assets/assets-blender/cocina4.gltf"></a-asset-item>
-    </a-assets>
+  
     <a-entity gltf-model="#cocina4" position="18.162 0 1.757" rotation="0 90 0" scale="1.5 1 1"></a-entity>
-    <a-assets>
-      <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
-    </a-assets>
-    <a-entity gltf-model="#cocina5" position="19.220 2.107 -10.820"></a-entity>
-    <a-assets>
-      <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
-    </a-assets>
-    <a-entity gltf-model="#cocina5" position="19.220 1.227 -13.536" scale="0.683 0.529 0.483"></a-entity>
     
+    <a-entity gltf-model="#cocina5" position="19.220 2.107 -10.820"></a-entity>
+    <a-entity gltf-model="#cocina5" position="19.220 1.227 -13.536" scale="0.683 0.529 0.483"></a-entity>
+
+    <!--Decorativos-->
+
+
+    <!--OBRAS-->    
     <!--Obras Felix D'eon-->
 
-    <a-text value="Felix d'Eon" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="2.67875 8.06299 -24.874" rotation="0 -90.237 0"></a-text>
+    <a-text value="Felix d'Eon" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="2.67875 8.06299 -24.622" rotation="0 -90.237 0"></a-text>
+    <a-text value="Felix d'Eon es un ilustrador y pintor que toma la temática gay y la cubre con una iconografía antigua para crear un lenguaje inexistente en esa época, reimagina estilos pasados y tiene como protagonistas a  minorías. Es el creador de la única lotería mexicana" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="2.679 5.65612 -24.5844" rotation="0 -90.237 0"></a-text>
+
     <a-box src="assets/baile_41.jpeg" position="-10.07397 5.41412 -17.34543" height="5" width="5" scale="0.85769 1.10505 0.62579"></a-box>
     <a-text value="El Baile de los 41 (2018)
-    Dibujo digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="-5.11942 3.56088 -17.40966" rotation="0 -179.14442197237398 0"></a-text>
-    <a-text value="Felix d'Eon es un ilustrador y pintor que toma la temática gay y la cubre con una iconografía antigua para crear un lenguaje inexistente en esa época, reimagina estilos pasados y tiene como protagonistas a  minorías. Es el creador de la única lotería mexicana" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="2.67875 6.00672 -24.874" rotation="0 -90.237 0"></a-text>
-
+    Dibujo digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="-4.67692 3.56088 -17.40966" rotation="0 -179.14442197237398 0"></a-text>
+    
     <a-box src="assets/la_trajinera.jpeg" position="-22.20219 5.41412 -30.05318" height="5" width="5" scale="1.558 1.27505 0.62579" rotation="0 -90 0"></a-box>
     <a-text value="La Trajinera del amor (2018)
     Dibujo digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="-22.11282 3.42098 -22.51904" rotation="0 90 0"></a-text>
@@ -279,77 +250,82 @@
     <a-text value="Fabián Cháirez sus obras giran en torno al cuerpo con una perspectiva erótica y el mundo LGBTQ+ que sale de los estereotipos de la virilidad mexicana, esto debido a que intenta responder al entorno hostil de la diversidad sexual en México." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="14.03012 5.82429 -17.48806" rotation="0 -180 0"></a-text>
     
     <a-text value="Estigmas (2023)
-    Oleo sobre lienzo 
-    96cm x 62cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 -27.00789" rotation="0 -90 0"></a-text>
+    Óleo sobre lienzo 
+    96cm x 62cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 -26.8267" rotation="0 -90 0"></a-text>
     <a-box src="assets/estigmas.jpeg" position="32.05364 5.32882 -29.57622" height="5" width="5" scale="0.85769 1.267 0.62579" rotation="0 90 0"></a-box>
     
     <a-text value="La Revolución (2014)
-    Oleo sobre lienzo 
+    Óleo sobre lienzo 
     30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="27.53625 3.64698 -38.6515" rotation=""></a-text>
     <a-box src="assets/La_Revolucion.jpeg" position="24.33661 5.62362 -38.66269" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation=""></a-box>
     
     <a-cylinder src="assets/idilio.jpeg" position="11.05786 5.71503 -39.309" height="5" width="5" scale="3 0.2 3" rotation="0 90 90"></a-cylinder>
     <a-text value="Idilio (2021)
-    Oleo sobre lienzo
+    Óleo sobre lienzo
     150cm x 150cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="13.91173 3.647 -38.87551" rotation=""></a-text>
     
     <!--Obras Ana-->
     <a-text value="Ana Segovia" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="16.59585 8.06299 -9.05244" rotation="0 90 0"></a-text>
     <a-text value="Ana Segovia es una pintora mexicana que explora la construcción de la masculinidad y la identidad queer en México, usando imágenes de la cultura popular para cuestionar roles de género y narrativas tradicionales." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="16.79091 5.78163 -8.93704" rotation="0 90 0"></a-text>
   
-    <a-box src="assets/La_Revolucion.jpeg" position="32.20852 5.32882 -12.10447" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 90 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 -9.61901" rotation="0 -90 0"></a-text>
+    <a-box src="assets/juansinmiedo.jpeg" position="32.209 5.329 -12.43869" height="5" width="5" scale="0.973 0.824 0.626" rotation="0 90 0"></a-box>
+    <a-text value="Juan Sin Miedo (2017)
+    Óleo sobre lienzo 
+    174cm x 61cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 -9.61901" rotation="0 -90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="32.16485 5.32882 -3.85445" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 90 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 -1.46126" rotation="0 -90 0"></a-text>
+    <a-box src="assets/lacuerda.jpeg" position="32.16485 5.53489 -3.88758" height="5" width="5" scale="0.85769 0.97244 0.62579" rotation="0 90 0"></a-box>
+    <a-text value="La Cuerda (2018)
+    Óleo sobre lienzo 
+    61cm x 76cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.70854 -1.27669" rotation="0 -90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="32.16485 5.32882 3.96818" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 90 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 6.42767" rotation="0 -90 0"></a-text>
+    <a-box src="assets/kissisbetter.jpeg" position="32.16485 5.32882 4.22025" height="5" width="5" scale="0.93132 0.8316 0.62579" rotation="0 90 0"></a-box>
+    <a-text value="Kiss Is Better (2018)
+    Óleo sobre lienzo 
+    210cm x 255cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="31.9855 3.64698 6.9892" rotation="0 -90 0"></a-text>
 
     <!--Obras Mario Mucho-->
 
     <a-text value="Mario Mucho" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="33.02159 8.063 5.91071" rotation="0 90 0"></a-text>
-    <a-text value="Mario Mucho es un pintor, ilustrador y animador. Habla sobre la importancia de reflejar en el arte una vision homerotica donde el “mexicano marica de periferia” se pueda ver representado. Sus obras tratan temas como la descolonización, las masculinidades, la homonormatividad y la capitalización de los cuerpos." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="33.017 5.782 5.84723" rotation="0 90 0"></a-text>
+    <a-text value="Mario Mucho es un pintor, ilustrador y animador. Habla sobre la importancia de reflejar en el arte una vision homerotica donde el “mexicano marica de periferia” se pueda ver representado. Sus obras tratan temas como la descolonización, las masculinidades, la homonormatividad y la capitalización de los cuerpos." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="33.017 5.37676 5.84723" rotation="0 90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="44.46309 5.91971 -10.09156" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation=""></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="39.75111 3.64698 -10.12402" rotation=""></a-text>
+    <a-box src="assets/rosapastel.jpeg" position="44.46309 5.91971 -10.09156" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation=""></a-box>
+    <a-text value="Rosa pastel, clichés y tonterías (2021)
+    Dibujo Digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="38.01573 4.09334 -10.12402" rotation=""></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="53.10683 5.80369 2.13906" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 -90 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="52.88674 3.64698 4.8171" rotation="0 -90 0"></a-text>
+    <a-box src="assets/yacompa.jpeg" position="53.10683 5.80369 2.11286" height="5" width="5" scale="0.98888 1.10505 0.62579" rotation="0 -90 0"></a-box>
+    <a-text value="Ya Compa (2019)
+    Dibujo Digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="52.88674 3.64698 5.01547" rotation="0 -90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="46.06919 5.80369 10.17528" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 -180 0"></a-box>
-    <a-box position="45.652 2.25919 10.73342" rotation="0 -0.157 0" depth="1" height="15" width="10" color="#D2B48C" scale="1.5 1.068 1">
-    </a-box>
+    <a-box src="assets/amordetres.jpeg" position="46.06919 5.80369 10.17528" height="5" width="5" scale="0.90115 0.92508 0.62579" rotation="0 -180 0"></a-box>
+    <a-text value="Amor de tres (2021)
+    Dibujo Digital" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="43.51541 3.64698 10.18799" rotation="0 -180 0"></a-text>
+   
 
     <!--Obras Sara-->
 
-    <a-text value="Sara Moreloz" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="33.00225 8.063 28.02278" rotation="0 90 0"></a-text>
-    <a-text value="Sarah Moreloz es una artista y activista LGBTIQ+. Su trabajo incluye pintura, escultura y gestión cultural, abordando temas de identidad, género y comunidad. Moreloz explora narrativas relacionadas con la diversidad y las luchas sociales." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="33.04729 5.78163 28.06068" rotation="0 90 0"></a-text>
+    <a-text value="Sara Moreloz" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="3 3 3" position="33.00225 8.063 26.51248" rotation="0 90 0"></a-text>
+    <a-text value="Sarah Moreloz es una artista y activista LGBTIQ+. Su trabajo incluye pintura, escultura y gestión cultural, abordando temas de identidad, género y comunidad. Moreloz explora narrativas relacionadas con la diversidad y las luchas sociales." font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.217 1.577 1" position="33.04729 5.78163 26.50889" rotation="0 90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="47.4617 5.50217 17.72008" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation=""></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="42.39054 3.10484 17.63763" rotation=""></a-text>
+    <a-box src="assets/por la colina.jpeg" position="47.4617 5.50217 17.72008" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation=""></a-box>
+    <a-text value="Por la colina de Cuautepec (2023)
+    Óleo sobre lienzo 
+    153cm x 93cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="41.38406 3.10484 17.63763" rotation=""></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="52.81773 5.50217 25.79357" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 90 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="52.96361 3.10484 20.21219" rotation="0 -90 0"></a-text>
+    <a-cylinder src="assets/popper.jpeg" position="52.818 6.16106 25.31427" height="5" width="5" scale="2.468 0.05901 2.34393" rotation="0 0 90"></a-cylinder>
+    <a-text value="El Sagrado Popper (2023)
+    Óleo sobre lienzo 
+    40cm de diámetro" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="52.96361 3.10484 20.21219" rotation="0 -90 0"></a-text>
 
-    <a-box src="assets/La_Revolucion.jpeg" position="44.63401 5.50217 37.57296" height="5" width="5" scale="0.85769 1.10505 0.62579" rotation="0 180 0"></a-box>
-    <a-text value="La Revolucion (2014)
-    Oleo sobre lienzo 
-    30cm x 40.5cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="42.10699 3.10484 37.22606" rotation="0 180 0"></a-text>
+    <a-box src="assets/de noche.png" position="44.63401 6.06841 37.57296" height="5" width="5" scale="0.96357 0.76234 0.62579" rotation="0 180 0"></a-box>
+    <a-text value="De noche todos los gatos son pardos (2024)
+    Óleo sobre lienzo 
+    60cm x 80cm" font="assets/PTS-msdf.json" font-image="assets/PTS.png" negate="false" color="black" scale="1.02597 1.36093 1" position="42.10699 3.10484 37.22606" rotation="0 180 0"></a-text>
+
+
+    <!--Objetos descargados-->
+
+
+    <!--<a-entity gltf-model="#planta1" position="0 0 0" scale="0.1 0.1 0.1"></a-entity>-->
 
   </a-scene>
     
