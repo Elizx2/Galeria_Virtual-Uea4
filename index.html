@@ -7,6 +7,7 @@
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    
 </head>
 <body>
   <a-scene>
@@ -24,6 +25,12 @@
       <a-asset-item id="cazuela" src="assets/assets-blender/cazuela.gltf"></a-asset-item>
       <a-asset-item id="cocina4" src="assets/assets-blender/cocina4.gltf"></a-asset-item>
       <a-asset-item id="cocina5" src="assets/assets-blender/mesa cocina.gltf"></a-asset-item>
+      <a-asset-item id="sombrero" src="assets/assets-blender/sombrero.gltf"></a-asset-item>
+      <a-asset-item id="perchero" src="assets/assets-blender/perchero.gltf"></a-asset-item>
+      <a-asset-item id="cucharas" src="assets/assets-blender/cucharas.gltf"></a-asset-item>
+      <a-asset-item id="cazo" src="assets/assets-blender/cazo.gltf"></a-asset-item>
+      <a-asset-item id="cruces" src="assets/assets-blender/cruces.gltf"></a-asset-item>
+      <a-asset-item id="pasillo" src="assets/assets-blender/pasillo.gltf"></a-asset-item>
 
       <!--Objetos descargados-->
       <a-asset-item id="planta1" src="assets/assets-blender/planta1.glb"></a-asset-item>
@@ -40,11 +47,15 @@
       <a-asset-item id="saleros" src="assets/assets-blender/saleros.glb"></a-asset-item>
       <a-asset-item id="vino" src="assets/assets-blender/vino.glb"></a-asset-item>
 
-
+      <!--Video-->
+      <video id="videito" autoplay loop="true" src="assets/pride_2.mp4"></video>
     </a-assets>
 
+    <!--Entorno-->
     <a-entity environment="preset: forest; dressingAmount: 1; ground: plane; dressing:trees; dressingScale:0"></a-entity>
-   
+    
+    <a-video src="#videito" autoplay loop="true" width="25" height="18" position="0.08565 4.73 37" rotation="0 -180 0" scale="1.2 0.5 2"></a-video>
+
     <!--malla de colision-->
     <!-- primer punto de vista. -->
       <a-entity id="rig"
@@ -210,19 +221,25 @@
     <!--Muebles-->
     <!--Sala-->
     <a-entity gltf-model="#sala2" position="-9.111 0.2 -30" rotation="0 180 0" scale="0.65 0.65 0.65"></a-entity>
+    <a-entity gltf-model="#perchero" position="-20.49439 0.35095 -19.34985" rotation="0 180 0" scale=""></a-entity>
 
     <!--CUARTO 1-->
     <a-entity gltf-model="#cama" position="35.721 0 -5.679" rotation="0 180 0"></a-entity>
-  
     <a-entity gltf-model="#ropero" position="51.933 0 -6.275" rotation="0 -90 0"></a-entity>
+    <a-entity gltf-model="#sombrero" position="33.23127 5.64376 -5.54855" rotation="0 90 0" scale="0.4 0.4 0.4"></a-entity>
+
 
     <!--cuarto2-->
     <a-entity gltf-model="#cama" position="36.093 0 33.652" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#cruces" position="3.88357 6.81848 -32.58098" rotation="0 -90 0"></a-entity>
+    <a-entity gltf-model="#cruces" position="3.88357 5.55465 -34.9028" rotation="0 -90 0"></a-entity>
+    <a-entity gltf-model="#cruces" position="3.88357 6.81848 -36.77756" rotation="0 -90 0"></a-entity>
 
     <a-entity gltf-model="#ropero" position="51.933 0 33.077" rotation="0 -90 0"></a-entity>
 
     <!--Comedor-->
     <a-entity gltf-model="#comedor" position="18.649 1.050 -28.818" scale="0.45 0.45 0.45"></a-entity>
+    <a-entity gltf-model="#cruces" position="36.093 5.56934 37.42242" ></a-entity>
 
     <!--cocina-->
     <a-entity gltf-model="#cazuela" position="16.51876 6.97542 5.792" rotation="75 90 0" scale="1.288 1 1.45"></a-entity>
@@ -233,7 +250,8 @@
     
     <a-entity gltf-model="#cocina5" position="19.220 2.107 -10.820"></a-entity>
     <a-entity gltf-model="#cocina5" position="19.220 1.227 -13.536" scale="0.683 0.529 0.483"></a-entity>
-
+    <a-entity gltf-model="#cucharas" position="20.69405 4.043 9.11258" scale="" rotation="0 -90 0"></a-entity>
+    <a-entity gltf-model="#cazo" position="18.33361 2.28069 4.77107" scale="0.7 0.7 0.7" rotation="0 -79.26641912516887 0"></a-entity>
     <!--Decorativos-->
 
 
@@ -382,6 +400,8 @@
     <a-entity gltf-model="#tetera" position="18.2073 2.243 -2.57849" scale="1.3 1.3 1.3" rotation="0 -50 0"></a-entity>
     <a-entity gltf-model="#saleros" position="19.46056 2.29906 -10.28581" scale="1 1 1" rotation="0 -50 0"></a-entity>
     <a-entity gltf-model="#vino" position="16.65731 2.60807 -29.3756" scale="1.2 1.2 1.2" rotation="0 0 0"></a-entity>
+
+    <a-entity gltf-model="#pasillo" position="49.45812 -0.85509 14.17815" scale="" rotation="0 -180 0"></a-entity>
 
 
 
